@@ -53,10 +53,102 @@ p {
 }
 
 .iconoInstagram {
-    font: size 100px
+    height: 50px;
+}
+#iconoFacebook {
+    box-sizing: border-box;
+    border-color: aquamarine;
+    border-style: double;
+}
+#iconoFacebook:hover {
+    background: aquamarine;
 }
 .imagenSucursal {
     position: relative;
     top: 5px;
     left:30%;
 }
+#barraDeBusqueda {
+width: 89%;
+}
+.encabezado {
+    background-color:aquamarine;
+    height: 75px;
+}
+#imagenes {
+    height: 75px;
+}
+.boton1 {
+    color: black;
+    background-color:aquamarine ;
+}
+.boton1:active {
+    color: black;
+    background-color: aqua;
+    font-size: 20px;
+}
+.comoComprar {
+    background-color: aquamarine;
+    border: 5px solid;
+    display: flex;
+    flex-direction:column;
+    align-items:center ;
+
+}
+#carrito {
+    height: 70px;
+}
+#piezas {
+    height: 30;
+    font-size: 30px;
+}
+.catalogo {
+    border: 2px solid;
+    border-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.enviar {
+    color: black;
+    background-color:aquamarine ;
+}
+.enviar:hover {
+    color:aliceblue;
+    background-color:black;
+    font-size: 20px;
+    } 
+.inicio {
+        color: black;
+        
+    }
+.inicio: :checked {
+        color:aliceblue;
+        background-color:aqua;
+        font-size: 25px;
+        } 
+.productos {
+            color: black;
+            
+        }
+.productos:link {
+            color:aliceblue;
+            background-color:aqua;
+            } 
+.comprar {
+            color: black;
+                
+            }
+.comprar :link {
+            color:aliceblue;
+            background-color:aqua;
+                } 
+.referencias {
+            color: black;
+                    
+                }
+.referencias:link {
+            color:aliceblue;
+            background-color:aqua;
+            } 
+

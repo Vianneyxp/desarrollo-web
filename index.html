@@ -8,40 +8,46 @@
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
+    <div class="encabezado"> 
+      <img src="./imagenes/logo.jpg" id="imagenes" alt="logo">
+    </div>
     <h1>RENY</h1>
     <header>
+      <div>
+        <button class="boton1">Buscar</button>
+        <label for="">
+          <input type="text" name="" id="barraDeBusqueda" />
+          
+      </div>
       <nav id="navIndex">
-        <ul>
-          <li>
+        <ul >
+          <li class="inicio">
             <a href="./index.html">inicio</a>
           </li>
-          <li>
+          <li class="productos">
             <a href="./productos.html">productos</a>
           </li>
-          <li>
+          <li class="comprar">
             <a href="./comprar.html">comprar</a>
           </li>
-          <li>
+          <li class="referencias">
             <a href="./referencias.html">referencias</a>
           </li>
-          <li>
+          <li class="contacto">
             <a href="./contacto.html">contacto</a>
           </li>
         </ul>
       </nav>
-      <div>
-        <img src="./e (1).jpg" alt="Logo de R" />
-      </div>
     </header>
     <main>
-      <section>
+      <section class="comoComprar">
         <h2>¿Como comprar?</h2>
         <ol>
-          <li>elegir modelo</li>
-          <li>elegir talla</li>
-          <li>mandarlo al carrito</li>
-          <li>elegir metodo de pago</li>
-          <li>comprar</li>
+          <li class="item">elegir modelo</li>
+          <li class="item">elegir talla</li>
+          <li class="item">mandarlo al carrito</li>
+          <li class="item">elegir metodo de pago</li>
+          <li class="item">comprar</li>
         </ol>
       </section>
       <div>
@@ -117,6 +123,14 @@
           </div>
           <div>
             <h4>¿qué buscas?</h4>
+            <section class="catalogo">
+              <img src="./imagenes/blusa.jpg" alt="" height="100px">
+              <img src="./imagenes/jeans.jpg" alt="" height="100px">
+              <img src="./imagenes/chamarra.jpg" alt="" height="100px">
+              <img src="./imagenes/sudaderas.jpg" alt="" height="100px">
+              <img src="./imagenes/mamelucos.jpg" alt="" height="100px">
+              <img src="./imagenes/vestido niña.jpg" alt="" height="100px">
+            </section>
             <select name="" id="">
               <option value="Pantalones">Pantalones</option>
               <option value="Faldas">Faldas</option>
@@ -125,12 +139,22 @@
               <option value="Chamarras">Chamarras</option>
             </select>
           </div>
-          <input type="submit" value="Enviar" />
+          <div>
+            <img src="/imagenes/carrito.png" id="carrito" alt="carrito">
+            <select name="" id="piezas">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            </div>
+          <input class="enviar" type="submit" value="Enviar" />
         </form>
       </section>
     </main>
     <footer>
-      <iconify-icon icon="bi:facebook" style="color: blue"></iconify-icon>
+      <iconify-icon icon="bi:facebook" style="color: blue" id="iconoFacebook"></iconify-icon>
     </footer>
     <footer class="footerIndex">
       <p>derechos reservados</p>
