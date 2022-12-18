@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>comprar</title>
+    <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+    <div class="encabezado"> 
+        <img src="./imagenes/logo.jpg" id="imagenes" alt="logo">
+      </div>
+      <header>
+        <div>
+          <button class="boton1">Buscar</button>
+          <label for="">
+            <input type="text" name="" id="barraDeBusqueda" />
+            
+        </div>
+        <h1>Comprar</h1>
     <header>
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li>
                     <a href="./index.html">inicio</a>
                 </li>
@@ -27,9 +39,53 @@
                 </li>
             </ul>
         </nav>
+
     </header>
-    <h1>RENY</h1>
-    <h2>Metodo de pago</h2>
+    <main>
         
+        <section class="comoComprar">
+            <h2>¿Como comprar?</h2>
+            <ol>
+              <li class="item">elegir modelo</li>
+              <li class="item">elegir talla</li>
+              <li class="item">mandarlo al carrito</li>
+              <li class="item">elegir metodo de pago</li>
+              <li class="item">comprar</li>
+            </ol>
+          </section>
+          <h2>Metodo de pago</h2>
+    </main>
+    <div>
+        <label for="">Tu dirección</label>
+          <input type="text" name="" id="" />
+          <div>
+            <label for="">Referencia de tu casa</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <h3>¿como será tu entrega?</h3>
+        <label for="">Entrega en tienda</label>
+        <input type="radio" name="como sera tu entrega" id="" />
+        <label for="">Entrega a domicilio</label>
+        <input
+          type="radio"
+          name="como sera tu 
+                entrega"
+          id=""
+        />
+        <label for="">Entrega en punto medio</label>
+        <input type="radio" name="como sera tu entrega" id="" />
+      </div>
+      <div>
+        <img src="/imagenes/carrito.png" id="carrito" alt="carrito">
+        <select name="" id="piezas">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        </div>
+        <input class="enviar" type="submit" value="Enviar" />
 </body>
 </html>

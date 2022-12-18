@@ -1,0 +1,16 @@
+@import "_variables"
+h1 {;font-family: $tipografiaPrincipal;
+    color: $colorFondos
+}
+p { font-family: $tipografiaPrincipal;
+color: $colorFondos;}
+.h2 { font-family: $tipografiaPrincipal;}
+.h3 { font-family: $tipografiaPrincipal;}
+
+ul { display: flex;
+justify-content: space-evenly;
+li { list-style: none;}
+a {text-decoration: none;
+color: blueviolet;}
+
+}

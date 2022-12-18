@@ -1,0 +1,31 @@
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: aquamarine;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: aquamarine;
+}
+
+.h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+ul li {
+  list-style: none;
+}
+ul a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+/*# sourceMappingURL=base.css.map */
