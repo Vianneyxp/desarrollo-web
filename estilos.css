@@ -128,7 +128,7 @@ width: 89%;
     color: black;
         
     }
-.inicio: :checked {
+.inicio :checked {
         color:aliceblue;
         background-color:aqua;
         font-size: 25px;
@@ -175,4 +175,3 @@ width: 89%;
     #imagenes {height: 400px;}
     #barraDeBusqueda {width: 90%;}
     .mapa { width: 450px;}
-    
