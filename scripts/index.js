@@ -29,9 +29,9 @@ function sumarParametros (invierno, primavera, verano) {
 sumarParametros(10,21,12);
 
 function comparacion (primavera, verano) {
-    if (primavera:<verano) (
+    if (primavera<verano) {
         console.log ("Aprovecha la gran variedad de articulos de Verano")
-    ) else if (verano==primavera) {
+    } else if (verano==primavera) {
         console.log("Temporada primavera-verano") 
     } else { console.log("Aprovecha la gran variedad de articulos de primavera")  }
     }
@@ -50,6 +50,7 @@ const usuario1 = {
     email: "diana@gmail.com",
     estado: "Puebla",
     acceso: true,
+    edadDelUsuario: 15
     unaFuncion: (a, b) => a + b
     talla:{
         sexo:"femenino",
@@ -60,6 +61,16 @@ const usuario1 = {
 }
 console.log(usuario1.talla.peso);
 
+function condicional (edadDelUsuario, 18) {
+    if (edadDelUsuario>18) {
+        console.log ("Valido")
+    } if (edadDelUsuario==18) {
+        console.log ("Valido")
+    } else if (edadDelUsuario<18) {
+        console.log ("No valido")
+    }
+}
+ 
 //Desestructuracion 
 const (nombre, estado, email) = usuario1;
 console.log(nombre, estado, email);
