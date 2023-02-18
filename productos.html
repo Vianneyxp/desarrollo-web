@@ -1,72 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>productos</title>
-    <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-    <div class="encabezado"> 
-        <img src="./imagenes/logo.jpg" id="imagenes" alt="logo">
-      </div>
-      <header>
-        <div>
-          <button class="boton1">Buscar</button>
-          <label for="">
-            <input type="text" name="" id="barraDeBusqueda" />
-            
-        </div>
-        <h1>Productos</h1>
-    <header>
-        <nav>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">inicio</a>
-                </li>
-                <li>
-                    <a href="./productos.html">productos</a>
-                </li>
-                <li>
-                    <a href="./comprar.html">comprar</a>
-                </li>
-                <li>
-                    <a href="./referencias.html">referencias</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div>
-        <h3>¿que tipo de ropa prefieres</h3>
-        <label for="">Formal</label>
-        <input type="checkbox" name="" id="" />
-        <label for="">Casual</label>
-        <input type="checkbox" name="" id="" />
-        <label for="">Deportiva</label>
-        <input type="checkbox" name="" id="" />
-      </div>
-    <div>
-        <h4>¿qué buscas?</h4>
-        <section class="catalogo">
-          <img src="./imagenes/blusa.jpg" alt="" height="100px">
-          <img src="./imagenes/jeans.jpg" alt="" height="100px">
-          <img src="./imagenes/chamarra.jpg" alt="" height="100px">
-          <img src="./imagenes/sudaderas.jpg" alt="" height="100px">
-          <img src="./imagenes/mamelucos.jpg" alt="" height="100px">
-          <img src="./imagenes/vestido niña.jpg" alt="" height="100px">
-        </section>
-        <select name="" id="">
-          <option value="Pantalones">Pantalones</option>
-          <option value="Faldas">Faldas</option>
-          <option value="Camisas">Camisas</option>
-          <option value="Blusas">Blusas</option>
-          <option value="Chamarras">Chamarras</option>
-        </select>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Reni</title>
+  </head>
 
-</body>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light azulito"
+      style="padding-top: 0; padding-bottom: 0"
+    >
+      <a class="navbar-brand" href="index.html"
+        ><img src="./img/logo reni.jpg" alt="" id="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Inicio <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="carro"
+              href="#"
+              data-toggle="modal"
+              data-target="#cartModal"
+            >
+              <p id="contador">0</p>
+              <img src="./img/carrito.png" alt="imagen de carrito" id="carrito" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="fh5co-blog-section d-flex">
+      <div class="container mx-auto">
+        <h1 class="text-center titulo">Productos</h1>
+        <button class="btn btn-primary" id="ordenAcendente">
+          Ordenar de más barato a más caro
+        </button>
+        <button class="btn btn-primary" id="ordenDecendente">
+          Ordenar de más caro a más barato
+        </button>
+        <br /><br />
+        <div class="row" id="cajita"></div>
+      </div>
+    </div>
+    <br /><br />
+
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Carrito de Compra</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container my-5">
+              <h2 class="text-center mb-4">Carrito de Compra</h2>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Producto</th>
+                              <th>Precio</th>
+                            </tr>
+                          </thead>
+                          <tbody id="productos"></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-4 mt-md-0">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title mb-3">Resumen</h5>
+                      <ul class="list-group list-group-flush">
+                        <li class="d-flex justify-content-between align-items-center">Total:<span id="total"></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-dismiss="modal"
+              id="btnComprar"
+            >
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark py-3 text-light">
+      <div class="container">
+        <p class="text-center">
+          Síguenos en:
+          <a href="#"><i class="fab fa-facebook fa-2x mx-3"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x mx-3"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x mx-3"></i></a>
+        </p>
+        <p class="text-center">
+          Mapa del sitio: <a href="./index.html">Inicio</a> | <a href="./productos.html">Productos</a> |
+          
+          <a href="./">Contacto</a>
+        </p>
+        <p class="text-center">&copy; Todos los derechos reservados 2023</p>
+      </div>
+    </footer>
+
+    <script src="funciones.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
